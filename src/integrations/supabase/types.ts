@@ -14,7 +14,183 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      consultations: {
+        Row: {
+          consultation_type: string | null
+          created_at: string
+          id: string
+          notes: string | null
+          recommendations: string | null
+          scheduled_date: string | null
+          status: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          consultation_type?: string | null
+          created_at?: string
+          id?: string
+          notes?: string | null
+          recommendations?: string | null
+          scheduled_date?: string | null
+          status?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          consultation_type?: string | null
+          created_at?: string
+          id?: string
+          notes?: string | null
+          recommendations?: string | null
+          scheduled_date?: string | null
+          status?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      meal_plans: {
+        Row: {
+          carbs_g: number | null
+          created_at: string
+          fat_g: number | null
+          fiber_g: number | null
+          id: string
+          plan_data: Json | null
+          plan_name: string
+          plan_type: string | null
+          protein_g: number | null
+          total_calories: number | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          carbs_g?: number | null
+          created_at?: string
+          fat_g?: number | null
+          fiber_g?: number | null
+          id?: string
+          plan_data?: Json | null
+          plan_name: string
+          plan_type?: string | null
+          protein_g?: number | null
+          total_calories?: number | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          carbs_g?: number | null
+          created_at?: string
+          fat_g?: number | null
+          fiber_g?: number | null
+          id?: string
+          plan_data?: Json | null
+          plan_name?: string
+          plan_type?: string | null
+          protein_g?: number | null
+          total_calories?: number | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          activity_level: string | null
+          age: number | null
+          created_at: string
+          dietary_restrictions: string[] | null
+          email: string
+          first_name: string | null
+          gender: string | null
+          health_goal: string | null
+          height_cm: number | null
+          id: string
+          last_name: string | null
+          medical_conditions: string[] | null
+          region: string | null
+          subscription_end: string | null
+          subscription_status: string | null
+          updated_at: string
+          user_id: string
+          weight_kg: number | null
+        }
+        Insert: {
+          activity_level?: string | null
+          age?: number | null
+          created_at?: string
+          dietary_restrictions?: string[] | null
+          email: string
+          first_name?: string | null
+          gender?: string | null
+          health_goal?: string | null
+          height_cm?: number | null
+          id?: string
+          last_name?: string | null
+          medical_conditions?: string[] | null
+          region?: string | null
+          subscription_end?: string | null
+          subscription_status?: string | null
+          updated_at?: string
+          user_id: string
+          weight_kg?: number | null
+        }
+        Update: {
+          activity_level?: string | null
+          age?: number | null
+          created_at?: string
+          dietary_restrictions?: string[] | null
+          email?: string
+          first_name?: string | null
+          gender?: string | null
+          health_goal?: string | null
+          height_cm?: number | null
+          id?: string
+          last_name?: string | null
+          medical_conditions?: string[] | null
+          region?: string | null
+          subscription_end?: string | null
+          subscription_status?: string | null
+          updated_at?: string
+          user_id?: string
+          weight_kg?: number | null
+        }
+        Relationships: []
+      }
+      progress_logs: {
+        Row: {
+          created_at: string
+          energy_level: number | null
+          id: string
+          log_date: string
+          mood: number | null
+          notes: string | null
+          user_id: string
+          weight_kg: number | null
+        }
+        Insert: {
+          created_at?: string
+          energy_level?: number | null
+          id?: string
+          log_date: string
+          mood?: number | null
+          notes?: string | null
+          user_id: string
+          weight_kg?: number | null
+        }
+        Update: {
+          created_at?: string
+          energy_level?: number | null
+          id?: string
+          log_date?: string
+          mood?: number | null
+          notes?: string | null
+          user_id?: string
+          weight_kg?: number | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
