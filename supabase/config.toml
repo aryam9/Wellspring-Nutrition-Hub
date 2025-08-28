@@ -1,1 +1,193 @@
 project_id = "tazpuesdyigvmjhakhxu"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+enabled = true
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+[db.pooler]
+enabled = false
+port = 54329
+pool_mode = "transaction"
+default_pool_size = 20
+max_client_conn = 100
+
+[realtime]
+enabled = true
+ip_version = "ipv4"
+port = 54323
+max_header_length = 4096
+
+[studio]
+enabled = true
+port = 54323
+api_url = "http://127.0.0.1:54321"
+openai_api_key = "env(OPENAI_API_KEY)"
+
+[inbucket]
+enabled = true
+port = 54324
+smtp_port = 54325
+pop3_port = 54326
+
+[storage]
+enabled = true
+file_size_limit = "50MiB"
+image_transformation = { enabled = true }
+
+[auth]
+enabled = true
+site_url = "http://127.0.0.1:3000"
+additional_redirect_urls = ["https://127.0.0.1:3000"]
+jwt_expiry = 3600
+enable_signup = true
+email_double_confirm_changes = true
+enable_manual_linking = false
+
+[auth.email]
+enable_signup = true
+double_confirm_changes = true
+enable_confirmations = false
+secure_password_change = true
+
+[auth.sms]
+enable_signup = false
+enable_confirmations = false
+template = "Your code is {{ .Code }} ."
+max_frequency = 300
+
+[auth.external.apple]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_APPLE_SECRET)"
+redirect_uri = ""
+
+[auth.external.azure]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_AZURE_SECRET)"
+url = ""
+
+[auth.external.bitbucket]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_BITBUCKET_SECRET)"
+
+[auth.external.discord]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_DISCORD_SECRET)"
+
+[auth.external.facebook]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_FACEBOOK_SECRET)"
+
+[auth.external.figma]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_FIGMA_SECRET)"
+
+[auth.external.github]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_GITHUB_SECRET)"
+
+[auth.external.gitlab]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_GITLAB_SECRET)"
+
+[auth.external.google]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_GOOGLE_SECRET)"
+skip_nonce_check = false
+
+[auth.external.keycloak]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_KEYCLOAK_SECRET)"
+url = ""
+
+[auth.external.linkedin_oidc]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_LINKEDIN_OIDC_SECRET)"
+
+[auth.external.notion]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_NOTION_SECRET)"
+
+[auth.external.twitch]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_TWITCH_SECRET)"
+
+[auth.external.twitter]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_TWITTER_SECRET)"
+
+[auth.external.slack_oidc]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_SLACK_OIDC_SECRET)"
+
+[auth.external.spotify]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_SPOTIFY_SECRET)"
+
+[auth.external.workos]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_WORKOS_SECRET)"
+url = ""
+
+[auth.external.zoom]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_ZOOM_SECRET)"
+
+[auth.external.fly]
+enabled = false
+client_id = ""
+secret = "env(SUPABASE_AUTH_EXTERNAL_FLY_SECRET)"
+
+[edge_runtime]
+enabled = true
+policy = "per_worker"
+inspector_port = 8083
+
+[functions.check-subscription]
+verify_jwt = true
+
+[functions.create-checkout]
+verify_jwt = true
+
+[functions.customer-portal]
+verify_jwt = true
+
+[analytics]
+enabled = false
+port = 54327
+vector_port = 54328
+gw_port = 54329
+gw_api_port = 54330
+
+[experimental]
+orioledb_version = ""
+s3_host = "env(S3_HOST)"
+s3_region = "env(S3_REGION)"
+s3_access_key = "env(S3_ACCESS_KEY)"
+s3_secret_key = "env(S3_SECRET_KEY)"
