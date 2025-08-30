@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useAuth } from '@/contexts/AuthContext';
 import { Link } from 'react-router-dom';
 import { 
@@ -428,6 +429,96 @@ const Landing = () => {
             <p className="text-sm text-muted-foreground">
               All plans include a 7-day free trial. Cancel anytime. No hidden fees.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-health-secondary/5">
+        <div className="container px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Get answers to common questions about our nutrition platform and services.
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-left">
+                  How does the personalized meal planning work?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Our AI-powered system analyzes your health goals, dietary preferences, allergies, and lifestyle to create customized meal plans. You'll complete a comprehensive assessment that covers your medical history, food preferences, cooking skills, and time constraints to ensure your plan fits perfectly into your life.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-left">
+                  Can I modify my meal plans and dietary preferences?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Absolutely! You can update your dietary preferences, allergies, and goals at any time. Our system will automatically adjust your meal plans and recommendations. You can also swap meals, adjust portions, and save your favorite recipes for future use.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-left">
+                  What qualifications do your nutrition experts have?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  All our nutrition experts are licensed registered dietitians (RD) or certified nutrition specialists (CNS) with advanced degrees in nutrition science. They undergo continuous education and are verified through professional boards to ensure they provide evidence-based, safe, and effective guidance.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4">
+                <AccordionTrigger className="text-left">
+                  How quickly will I see results?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Results vary based on individual goals and adherence to the plan. Most users report increased energy levels within the first week, while weight management and other health improvements typically become noticeable within 2-4 weeks. Our progress tracking helps you monitor improvements in real-time.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5">
+                <AccordionTrigger className="text-left">
+                  Is the app suitable for people with medical conditions?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Yes, our platform is designed to accommodate various medical conditions including diabetes, hypertension, heart disease, and digestive issues. However, we always recommend consulting with your healthcare provider before starting any new nutrition program, especially if you have complex medical conditions or take medications.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6">
+                <AccordionTrigger className="text-left">
+                  Can I cancel my subscription anytime?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Yes, you can cancel your subscription at any time with no cancellation fees. You'll continue to have access to your plan until the end of your current billing period. We also offer a 7-day free trial for new users to try our platform risk-free.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7">
+                <AccordionTrigger className="text-left">
+                  Do you provide grocery lists and recipe instructions?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Yes! Every meal plan comes with detailed grocery lists organized by store sections for easy shopping. All recipes include step-by-step instructions, prep times, cooking tips, and nutritional information. You can also access video tutorials for more complex recipes.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-8">
+                <AccordionTrigger className="text-left">
+                  Is my personal health information secure?
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">
+                  Absolutely. We use bank-level encryption and follow HIPAA compliance standards to protect your personal health information. Your data is never shared with third parties without your explicit consent, and you have full control over your privacy settings.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
