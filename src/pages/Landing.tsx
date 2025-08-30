@@ -11,7 +11,10 @@ import {
   Zap,
   Apple,
   Clock,
-  Award
+  Award,
+  Star,
+  TrendingUp,
+  Shield
 } from 'lucide-react';
 
 const Landing = () => {
@@ -47,6 +50,37 @@ const Landing = () => {
     "Progress tracking and motivation",
     "Dietary restriction support",
     "24/7 access to your nutrition plan"
+  ];
+
+  const statistics = [
+    { number: "15,000+", label: "Active Users", icon: Users },
+    { number: "92%", label: "Goal Achievement Rate", icon: Target },
+    { number: "4.8/5", label: "Average Rating", icon: Star },
+    { number: "2.5x", label: "Faster Results", icon: TrendingUp }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Chen",
+      role: "Marketing Manager",
+      image: "/placeholder.svg",
+      quote: "Lost 25 pounds in 4 months! The personalized meal plans made it so easy to stick to my goals. I finally found a sustainable approach to healthy eating.",
+      rating: 5
+    },
+    {
+      name: "Michael Rodriguez",
+      role: "Teacher",
+      image: "/placeholder.svg", 
+      quote: "Managing my diabetes has never been easier. The expert consultations and tailored nutrition advice have completely transformed my health.",
+      rating: 5
+    },
+    {
+      name: "Emily Johnson",
+      role: "Busy Mom",
+      image: "/placeholder.svg",
+      quote: "With three kids, I thought I'd never have time for proper nutrition. This app made meal planning effortless and my energy levels are through the roof!",
+      rating: 5
+    }
   ];
 
   return (
@@ -164,6 +198,90 @@ const Landing = () => {
                   <p className="text-muted-foreground">Work with licensed nutritionists and dietitians who understand your unique needs.</p>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statistics Section */}
+      <section className="py-20 bg-background">
+        <div className="container px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Proven Results That Speak for Themselves
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Join thousands of satisfied users who have transformed their health with our platform.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+            {statistics.map((stat, index) => {
+              const Icon = stat.icon;
+              return (
+                <div key={index} className="text-center">
+                  <div className="mx-auto w-20 h-20 bg-health-primary/10 rounded-full flex items-center justify-center mb-4">
+                    <Icon className="h-10 w-10 text-health-primary" />
+                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-health-primary mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-muted-foreground font-medium">
+                    {stat.label}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Reviews Section */}
+      <section className="py-20 bg-health-secondary/5">
+        <div className="container px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Real Stories, Real Results
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Discover how our platform has helped people achieve their health goals and transform their lives.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-card/80 backdrop-blur-sm">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-4">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name}
+                      className="w-12 h-12 rounded-full bg-health-secondary/20"
+                    />
+                    <div>
+                      <h4 className="font-semibold">{testimonial.name}</h4>
+                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-1 mb-3">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-health-warning text-health-warning" />
+                    ))}
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <blockquote className="text-muted-foreground leading-relaxed">
+                    "{testimonial.quote}"
+                  </blockquote>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm rounded-full px-6 py-3 border">
+              <Shield className="h-5 w-5 text-health-success" />
+              <span className="text-sm font-medium">Verified Reviews from Real Users</span>
             </div>
           </div>
         </div>
