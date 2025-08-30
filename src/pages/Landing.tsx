@@ -287,6 +287,151 @@ const Landing = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-20 bg-background">
+        <div className="container px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Choose Your Health Journey
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Select the perfect plan to achieve your health and nutrition goals with personalized guidance and expert support.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Basic Plan */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-card/80 backdrop-blur-sm">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl">Basic</CardTitle>
+                <div className="flex items-center justify-center gap-1 mt-4">
+                  <span className="text-4xl font-bold text-health-primary">$9</span>
+                  <span className="text-muted-foreground">/month</span>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Basic meal planning</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Progress tracking</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Email support</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Mobile app access</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full mt-6" variant="outline">
+                  <Link to="/pricing">Choose Basic</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Premium Plan */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-card/80 backdrop-blur-sm relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <span className="bg-health-primary text-white px-4 py-1 rounded-full text-sm font-medium">
+                  Most Popular
+                </span>
+              </div>
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl">Premium</CardTitle>
+                <div className="flex items-center justify-center gap-1 mt-4">
+                  <span className="text-4xl font-bold text-health-primary">$19</span>
+                  <span className="text-muted-foreground">/month</span>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Advanced meal planning</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Detailed progress analytics</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Expert consultations (2/month)</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Priority support</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Custom dietary restrictions</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Recipe recommendations</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full mt-6 bg-health-primary hover:bg-health-primary/90">
+                  <Link to="/pricing">Choose Premium</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Enterprise Plan */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow bg-card/80 backdrop-blur-sm">
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl">Enterprise</CardTitle>
+                <div className="flex items-center justify-center gap-1 mt-4">
+                  <span className="text-4xl font-bold text-health-primary">$29</span>
+                  <span className="text-muted-foreground">/month</span>
+                </div>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Everything in Premium</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Unlimited expert consultations</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Personal nutritionist</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>24/7 priority support</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Advanced health metrics</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="h-5 w-5 text-health-success flex-shrink-0" />
+                    <span>Family plan (up to 4 members)</span>
+                  </li>
+                </ul>
+                <Button asChild className="w-full mt-6" variant="outline">
+                  <Link to="/pricing">Choose Enterprise</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-sm text-muted-foreground">
+              All plans include a 7-day free trial. Cancel anytime. No hidden fees.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-health-primary to-health-success">
         <div className="container px-4 text-center">
