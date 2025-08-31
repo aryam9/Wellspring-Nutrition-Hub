@@ -49,11 +49,12 @@ const InteractiveBackground = () => {
   return (
     <div 
       ref={containerRef}
-      className="fixed inset-0 pointer-events-none overflow-hidden z-0"
+      className="fixed inset-0 pointer-events-none overflow-hidden"
+      style={{ zIndex: -1 }}
     >
       {/* Gradient Orbs */}
       <div 
-        className="absolute w-96 h-96 rounded-full opacity-20 transition-all duration-1000 ease-out"
+        className="absolute w-96 h-96 rounded-full opacity-40 transition-all duration-1000 ease-out"
         style={{
           background: 'radial-gradient(circle, hsl(var(--health-primary) / 0.3) 0%, transparent 70%)',
           transform: `translate(${mousePosition.x * 2 - 100}px, ${mousePosition.y * 2 - 100}px) scale(${isHovering ? 1.2 : 1})`,
@@ -63,7 +64,7 @@ const InteractiveBackground = () => {
       />
       
       <div 
-        className="absolute w-80 h-80 rounded-full opacity-15 transition-all duration-1000 ease-out"
+        className="absolute w-80 h-80 rounded-full opacity-30 transition-all duration-1000 ease-out"
         style={{
           background: 'radial-gradient(circle, hsl(var(--health-success) / 0.4) 0%, transparent 70%)',
           transform: `translate(${mousePosition.x * -1.5 + 75}px, ${mousePosition.y * 1.8 - 90}px) scale(${isHovering ? 1.1 : 1})`,
