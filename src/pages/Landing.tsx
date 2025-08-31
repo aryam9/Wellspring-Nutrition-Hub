@@ -112,10 +112,102 @@ const Landing = () => {
                   <Link to="/auth">Start Your Journey</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
-                  <Link to="#features">Learn More</Link>
+                  <Link to="#about">Learn More</Link>
                 </Button>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 bg-gradient-to-br from-health-secondary/20 via-background to-health-primary/5">
+        <div className="container px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-health-primary to-health-success bg-clip-text text-transparent">
+              Your Health Journey Starts Here
+            </h2>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed">
+              House of Health is more than just a nutrition app—it's your comprehensive wellness companion. 
+              We combine cutting-edge science with personalized care to help you achieve lasting health transformations.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+              <div className="text-left space-y-6">
+                <h3 className="text-2xl font-bold text-health-primary">What Makes Us Different?</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-health-success mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold mb-1">Evidence-Based Approach</h4>
+                      <p className="text-muted-foreground">Our recommendations are backed by the latest nutritional science and research studies.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-health-success mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold mb-1">Personalized for You</h4>
+                      <p className="text-muted-foreground">Every meal plan, recommendation, and goal is tailored to your unique body, lifestyle, and preferences.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-health-success mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold mb-1">Expert Support</h4>
+                      <p className="text-muted-foreground">Connect with certified nutritionists and health coaches who understand your journey.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-8 border shadow-lg">
+                <h3 className="text-2xl font-bold mb-4 text-health-primary">Ready to Transform Your Health?</h3>
+                <p className="text-muted-foreground mb-6">
+                  Join thousands of users who have already started their journey to better health. 
+                  Get your personalized nutrition plan in just 5 minutes.
+                </p>
+                <div className="space-y-4">
+                  {user ? (
+                    <Button asChild size="lg" className="w-full bg-health-primary hover:bg-health-primary/90">
+                      <Link to="/dashboard">Access Your Dashboard</Link>
+                    </Button>
+                  ) : (
+                    <>
+                      <Button asChild size="lg" className="w-full bg-health-primary hover:bg-health-primary/90">
+                        <Link to="/auth">Start Your Free Journey</Link>
+                      </Button>
+                      <p className="text-sm text-muted-foreground text-center">
+                        No credit card required • Get started in under 5 minutes
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <div className="w-16 h-16 bg-health-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="h-8 w-8 text-health-primary" />
+                </div>
+                <h4 className="font-semibold mb-2">Set Your Goals</h4>
+                <p className="text-muted-foreground">Define your health objectives and let us create a personalized roadmap for success.</p>
+              </div>
+              <div>
+                <div className="w-16 h-16 bg-health-success/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Apple className="h-8 w-8 text-health-success" />
+                </div>
+                <h4 className="font-semibold mb-2">Follow Your Plan</h4>
+                <p className="text-muted-foreground">Get daily meal recommendations, recipes, and guidance tailored to your lifestyle.</p>
+              </div>
+              <div>
+                <div className="w-16 h-16 bg-health-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="h-8 w-8 text-health-warning" />
+                </div>
+                <h4 className="font-semibold mb-2">Track Progress</h4>
+                <p className="text-muted-foreground">Monitor your journey with detailed analytics and celebrate your achievements.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
