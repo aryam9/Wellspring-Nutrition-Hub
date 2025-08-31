@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { useAuth } from '@/contexts/AuthContext';
+import InteractiveBackground from '@/components/InteractiveBackground';
 import { Link } from 'react-router-dom';
 import { 
   Heart, 
@@ -85,7 +86,8 @@ const Landing = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <InteractiveBackground />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-background via-health-secondary/20 to-health-primary/10 py-20">
         <div className="container px-4">
